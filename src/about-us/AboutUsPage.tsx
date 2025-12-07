@@ -162,11 +162,14 @@ function AboutPage() {
         <div className="cta-banner-content">
           <div className="cta-banner-copy">
             <h3>Our app</h3>
-            <p>App bio/tagline</p>
+            <p>App bio/tagline.</p>
           </div>
           <button type="button" className="secondary-button">
             Download the app
           </button>
+          <div className="app-image">
+            <img src="/app.png" alt="app" />
+          </div>
         </div>
       </section>
 
