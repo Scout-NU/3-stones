@@ -1,0 +1,144 @@
+/* ==================== */
+/* MOBILE ONLY (under 768px) */
+/* ==================== */
+@media (max-width: 767px) {
+  /* Navigation - hide links, show hamburger */
+  .nav-links {
+    display: none !important;
+  }
+
+  .hamburger-menu {
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #285852;
+    border-radius: 2px;
+  }
+
+  /* Hero section */
+  .hero-section {
+    padding: 2rem 0 6rem 0 !important;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
+  }
+
+  /* Hero title - hide on mobile */
+  .hero-title {
+    display: none !important;
+  }
+
+  /* Info card image - hide on mobile */
+  .info-card-image {
+    display: none !important;
+  }
+
+  /* Info card text - show on mobile */
+  .info-card-text {
+    display: block !important;
+    color: white;
+    padding: 0 1.5rem;
+  }
+
+  .info-card-text h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .info-card-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .info-card-text .no-minimums span {
+    text-decoration: underline;
+  }
+
+  /* Hero content */
+  .hero-content {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    align-items: flex-start !important;
+  }
+
+  /* Hero graphic - hide on mobile */
+  .hero-graphic {
+    display: none !important;
+  }
+
+  /* Graphic section - show on mobile */
+  .graphic-section {
+    display: flex !important;
+    justify-content: center;
+    padding: 2rem;
+    background-color: white;
+  }
+
+  /* Stock laptop - hide on mobile */
+  .stock-laptop-section {
+    display: none !important;
+  }
+
+  /* CTA Button */
+  .hero-cta {
+    margin-left: 0 !important;
+    text-align: center !important;
+    margin-top: 1rem !important;
+  }
+
+  .hero-cta button {
+    margin-left: 0 !important;
+  }
+
+  /* Features section */
+  .features-container {
+    flex-direction: column !important;
+    gap: 2.5rem !important;
+    align-items: center !important;
+  }
+
+  .features-container > div {
+    text-align: center !important;
+    max-width: 280px !important;
+  }
+
+  .features-container p {
+    color: #285852 !important;
+  }
+
+  /* Bottom CTA */
+  .bottom-cta {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 2rem !important;
+  }
+
+  .bottom-cta h2 {
+    text-align: center !important;
+  }
+}
+
+/* ==================== */
+/* DESKTOP (768px+) - Hide mobile-only elements */
+/* ==================== */
+@media (min-width: 768px) {
+  .hamburger-menu {
+    display: none !important;
+  }
+
+  .info-card-text {
+    display: none !important;
+  }
+
+  .graphic-section {
+    display: none !important;
+  }
+}

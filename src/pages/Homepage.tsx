@@ -2,6 +2,7 @@ import logo from '../assets/3StonesLogo.png'
 import homePageGraphic from '../assets/HomePageGraphic.png'
 import stockLaptop from '../assets/StockLaptop.png'
 import infoCard from '../assets/InfoCard.png'
+import './Homepage.css'
 
 export default function Homepage() {
   return (
@@ -23,7 +24,16 @@ export default function Homepage() {
           />
           <span style={{ fontWeight: '800', fontSize: '1.3rem', color: '#285852', marginLeft: '0.5rem', marginTop: '1rem' }}>3 Stones</span>
         </div>
-        <div style={{ display: 'flex', gap: '2rem' }}>
+        
+        {/* Hamburger Menu (mobile only) */}
+        <div className="hamburger-menu" style={{ display: 'none' }}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Nav Links (desktop) */}
+        <div className="nav-links" style={{ display: 'flex', gap: '2rem' }}>
           {['Home', 'Developer', 'Education', 'About'].map(item => (
             <a key={item} href="#" style={{
               textDecoration: 'none',
@@ -36,7 +46,7 @@ export default function Homepage() {
       </nav>
 
       {/* Hero Section */}
-      <section style={{
+      <section className="hero-section" style={{
         backgroundColor: '#285852',
         padding: '4rem 2rem 6rem 2rem',
         color: 'white'
@@ -45,7 +55,7 @@ export default function Homepage() {
           maxWidth: '1200px',
           margin: '0 auto'
         }}>
-          <h1 style={{
+          <h1 className="hero-title" style={{
             fontSize: '3.5rem',
             fontWeight: 'bold',
             textAlign: 'left',
@@ -53,22 +63,30 @@ export default function Homepage() {
             marginLeft: '2rem'
           }}><strong>3 Stones</strong></h1>
 
-          <div style={{
+          <div className="hero-content" style={{
             display: 'flex',
             justifyContent: 'flex-start',
             alignItems: 'center',
             gap: '6rem',
             flexWrap: 'wrap'
           }}>
-            {/* Info Card */}
+            {/* Info Card Image (desktop) */}
             <img 
+              className="info-card-image"
               src={infoCard} 
               alt="Real estate development, accessible for everyone" 
               style={{ maxWidth: '500px', height: 'auto' }}
             />
 
-            {/* Illustration */}
-            <div style={{ maxWidth: '300px' }}>
+            {/* Info Card Text (mobile only - hidden by default) */}
+            <div className="info-card-text" style={{ display: 'none' }}>
+              <h2>Real estate development, accessible for everyone</h2>
+              <p>Crowdfunding platform connecting investors of every budget with qualified developers</p>
+              <p className="no-minimums">Get investing with <span>no minimums</span></p>
+            </div>
+
+            {/* Illustration (desktop) */}
+            <div className="hero-graphic" style={{ maxWidth: '300px' }}>
               <img 
                 src={homePageGraphic} 
                 alt="Real estate illustration" 
@@ -78,7 +96,7 @@ export default function Homepage() {
           </div>
 
           {/* CTA Button */}
-          <div style={{ textAlign: 'left', marginTop: '2rem' }}>
+          <div className="hero-cta" style={{ textAlign: 'left', marginTop: '2rem' }}>
             <button style={{
               backgroundColor: 'white',
               color: '#285852',
@@ -97,8 +115,17 @@ export default function Homepage() {
         </div>
       </section>
 
+      {/* Graphic Section (mobile only) */}
+      <section className="graphic-section" style={{ display: 'none' }}>
+        <img 
+          src={homePageGraphic} 
+          alt="Real estate illustration" 
+          style={{ width: '100%', height: 'auto', maxWidth: '300px' }}
+        />
+      </section>
+
       {/* Image Section */}
-      <section style={{
+      <section className="stock-laptop-section" style={{
         paddingTop: '1rem',
         backgroundColor: '#f5f5f5'
       }}>
@@ -114,7 +141,7 @@ export default function Homepage() {
         padding: '4rem 2rem',
         backgroundColor: 'white'
       }}>
-        <div style={{
+        <div className="features-container" style={{
           display: 'flex',
           justifyContent: 'center',
           gap: '7.5rem',
@@ -141,7 +168,7 @@ export default function Homepage() {
       </section>
 
       {/* Bottom CTA Section */}
-      <section style={{
+      <section className="bottom-cta" style={{
         backgroundColor: '#285852',
         padding: '2.5rem 2rem',
         display: 'flex',
