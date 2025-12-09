@@ -517,16 +517,16 @@
 @media (max-width: 1200px) {
   .info-text1-container {
     left: 0%;
-    width: 48%;
+    width: 55%;
   }
   
   .info-text2-container {
     right: 0%;
-    width: 48%;
+    width: 55%;
   }
   
   .disclosure-sidebar {
-    width: 20%;
+    width: 30%;
   }
 }
 
@@ -535,11 +535,14 @@
     padding: clamp(60px, 8vw, 90px) 0 60px;
   }
 
-  .info-text1-container,
+  .info-text1-container {
+    left: 0%;
+    width: 70%;
+  }
+  
   .info-text2-container {
-    position: static;
-    width: 100%;
-    margin-bottom: 24px;
+    right: 0%;
+    width: 70%;
   }
 
   .disclosure-sidebar {
@@ -555,11 +558,6 @@
   .info-container {
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
-  }
-
-  .info-square {
-    order: -1;
   }
 
   .founder-content {
@@ -605,45 +603,69 @@
     font-size: clamp(14px, 4vw, 20px);
   }
 
+  /* Make left column full width and stack */
   .info-text1-container {
     position: static;
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 
+  /* Reduce inner padding so content fits better on small screens */
   .why-us-content {
     position: relative;
-    padding: clamp(30px, 8vw, 40px) clamp(20px, 5vw, 30px);
-    justify-content: flex-start;  
-    padding-top: clamp(20px, 5vw, 30px);  
+    padding: 14px 12px;
+    justify-content: flex-start;
+    padding-top: 12px;
+  }
+  .why-us-content h2 {
+    font-size: clamp(20px, 6vw, 28px);
+    margin-bottom: 8px;
   }
   .why-us-list {
     grid-template-columns: 1fr;
+    gap: 8px 10px;
   }
 
   .disclosure-sidebar {
     position: static;
     width: 100%;
-    margin-bottom: 24px;
-    padding: clamp(20px, 5vw, 30px);
+    margin-bottom: 16px;
+    padding: 12px;
   }
 
   /* Fix Disclosure text to fit in white box on mobile */
   .info-text2-container {
     position: static;
     width: 100%;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+  }
+
+  /* Make the disclosure area appear as a contained white bubble */
+  .info-text2 {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
   }
 
   .disclosure-content {
     position: relative;
-    padding: clamp(30px, 8vw, 40px) clamp(20px, 5vw, 30px);
-    justify-content: flex-start;  /* ADD THIS */
+    padding: 10px 8px;
+    justify-content: flex-start;
   }
 
   .disclosure-text p {
     max-width: 100%;
-    font-size: clamp(14px, 3.5vw, 16px);
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-main);
+    font-weight: 600;
+  }
+
+  .disclosure-button {
+    margin-top: 10px;
   }
 
   .founder-info {
@@ -680,20 +702,5 @@
 
   .app-image img {
     height: clamp(200px, 50vw, 300px);
-  }
-
-  .modal-header,
-  .modal-body {
-    padding: 20px;
-  }
-
-  .founder-buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 12px;
-  }
-
-  .founder-button {
-    width: 100%;
   }
 }
