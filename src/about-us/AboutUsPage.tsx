@@ -161,8 +161,8 @@ function AboutPage() {
       <section className="cta-banner">
         <div className="cta-banner-content">
           <div className="cta-banner-copy">
-            <h3>Our app</h3>
-            <p>App bio/tagline.</p>
+            <h3>3 Stones</h3>
+            <p>Real estate development, accessible for everyone</p>
           </div>
           <button type="button" className="secondary-button">
             Download the app

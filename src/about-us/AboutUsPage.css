@@ -52,7 +52,7 @@
 }
 
 .hero-triangle {
-  width: 100vw;
+  width: 110vw;
   max-width: none;
   position: relative;
   left: 50%;
@@ -63,7 +63,7 @@
 
 .hero-mission {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -82,7 +82,7 @@
 .info {
   position: relative;
   padding: 0;
-  margin-top: clamp(-40px, -8vw, -80px);
+  margin-top: clamp(-60px, -12vw, -150px);
   background: var(--green);
 }
 
@@ -124,7 +124,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: clamp(30px, 8vw, 80px);
+  padding-top: clamp(30px, 8vw, 90px);
   padding-left: clamp(30px, 5vw, 80px);
 }
 
@@ -591,23 +591,95 @@
   }
 
   .hero h1 {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     text-align: center;
+    padding-left: 0;
+  }
+  
+  .hero-mission {
+    top: 70%;
+    width: 90%;
+  }
+  
+  .hero-mission p {
+    font-size: clamp(14px, 4vw, 20px);
+  }
+
+  .info-text1-container {
+    position: static;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .why-us-content {
+    position: relative;
+    padding: clamp(30px, 8vw, 40px) clamp(20px, 5vw, 30px);
+    justify-content: flex-start;  
+    padding-top: clamp(20px, 5vw, 30px);  
+  }
+  .why-us-list {
+    grid-template-columns: 1fr;
+  }
+
+  .disclosure-sidebar {
+    position: static;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: clamp(20px, 5vw, 30px);
+  }
+
+  /* Fix Disclosure text to fit in white box on mobile */
+  .info-text2-container {
+    position: static;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .disclosure-content {
+    position: relative;
+    padding: clamp(30px, 8vw, 40px) clamp(20px, 5vw, 30px);
+    justify-content: flex-start;  /* ADD THIS */
+  }
+
+  .disclosure-text p {
+    max-width: 100%;
+    font-size: clamp(14px, 3.5vw, 16px);
   }
 
   .founder-info {
     padding: 48px 16px;
   }
 
+  /* Mobile CTA Banner */
   .cta-banner {
     padding: 40px 16px;
   }
 
   .cta-banner-content {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
     gap: 20px;
+  }
+
+  .cta-banner-copy {
+    text-align: left;
+  }
+
+  .secondary-button {
+    align-self: flex-start;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .app-image {
+    align-self: flex-end;
+    margin-right: -16px;
+    margin-bottom: -40px;
+  }
+
+  .app-image img {
+    height: clamp(200px, 50vw, 300px);
   }
 
   .modal-header,
@@ -618,6 +690,7 @@
   .founder-buttons {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .founder-button {
