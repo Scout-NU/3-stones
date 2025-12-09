@@ -166,14 +166,14 @@
 
 .benefit-text {
   text-align: center;
-  color: var(--text-muted);
+  color: var(--green);
   line-height: 1.4;
   font-size: 15.5px;
   font-family: 'Source Sans 3', 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
 }
 
 .benefit-text strong {
-  color: var(--text-main);
+  color: var(--green);
 }
 
 .timeline {
