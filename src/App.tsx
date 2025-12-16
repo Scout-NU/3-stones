@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
    import EducationPage from './pages/education';
    import Homepage from './pages/Homepage'
@@ -16,3 +17,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
    }
 
    export default App;
+=======
+import AboutUsPage from './about-us/AboutUsPage';
+
+function App() {
+  return <AboutUsPage/>
+}
+
+export default App
+>>>>>>> origin/feature/about-us-page
